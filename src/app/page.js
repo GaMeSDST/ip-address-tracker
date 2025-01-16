@@ -1,101 +1,52 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    return (
+        <>
+            <div className="relative">
+                <div className="absolute w-full h-[15.625rem]">
+                    <Image
+                        alt="pattern background"
+                        className="-z-0 bg-no-repeat bg-cover bg-[url(../../public/pattern-bg-desktop.png)] max-[650px]:bg-[url(../../public/pattern-bg-mobile.png)]"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        layout="fill"
+                        loading="eager"
+                    />
+                </div>
+                <div className="absolute w-full flex flex-col items-center">
+                    <p className="font-semibold text-[2rem] mt-4 text-white">IP Address Tracker</p>
+                    <div className="relative flex mt-[1rem]">
+                        <input
+                            placeholder="Search for any IP address or domain"
+                            className="max-w-[30rem] min-w-[20rem] min-h-[3rem] text-black px-4 text-sm rounded-xl"
+                        ></input>
+                        <button
+                            type="button"
+                            className="rounded-r-xl right-0 flex flex-col justify-center items-center absolute w-12 h-12 hover:bg-[#3f3f3f] bg-black"
+                        >
+                            <div className="bg-center bg-[url(../../public/icon-arrow.svg)] w-[0.6875rem] h-[0875rem] bg-no-repeat"></div>
+                        </button>
+                    </div>
+                    <div className="flex flex-col gap-5 justify-center w-[20rem] h-[19rem] rounded-lg relative top-[1.5rem] bg-white text-[#2e2e2e]">
+                        <div className="text-center">
+                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">ip address</p>
+                            <p className="text-xl font-medium ">192.212.174.101</p>
+                        </div>
+                        <div className="text-center">
+                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">Location</p>
+                            <p className="text-xl font-medium ">Brooklyn, NY 10001</p>
+                        </div>
+                        <div className="text-center">
+                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">Timezone</p>
+                            <p className="text-xl font-medium ">UTC -05:00</p>
+                        </div>
+                        <div className="text-center">
+                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">ISP</p>
+                            <p className="text-xl font-medium ">SpaceX Starlink</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
