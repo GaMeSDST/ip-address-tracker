@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
     return (
         <>
-            <div className="relative">
+            <div className="relative h-[15.625rem]">
                 <div className="absolute w-full h-[15.625rem]">
                     <Image
                         alt="pattern background"
@@ -18,7 +18,7 @@ export default function Home() {
                     <div className="relative flex mt-[1rem]">
                         <input
                             placeholder="Search for any IP address or domain"
-                            className="max-w-[30rem] min-w-[20rem] min-h-[3rem] text-black px-4 text-sm rounded-xl"
+                            className="max-w-[30rem] min-w-[20rem] lg:min-w-[33rem] lg:text-base min-h-[3rem] text-black px-4 text-sm rounded-xl"
                         ></input>
                         <button
                             type="button"
@@ -27,26 +27,27 @@ export default function Home() {
                             <div className="bg-center bg-[url(../../public/icon-arrow.svg)] w-[0.6875rem] h-[0875rem] bg-no-repeat"></div>
                         </button>
                     </div>
-                    <div className="flex flex-col gap-5 justify-center w-[20rem] h-[19rem] rounded-lg relative top-[1.5rem] bg-white text-[#2e2e2e]">
-                        <div className="text-center">
-                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">ip address</p>
-                            <p className="text-xl font-medium ">192.212.174.101</p>
+                    <div className="flex flex-col gap-5 lg:w-[63rem] lg:h-[10rem] lg:flex-row lg:gap-[2rem] lg:items-start lg:pt-[2rem] lg:justify-start lg:pl-[3rem] justify-center w-[20rem] h-[19rem] rounded-lg relative top-[1.5rem] bg-white text-[#2e2e2e]">
+                        <div className="lg:min-h-[6rem] text-center">
+                            <p className="lg:text-start uppercase font-semibold text-xs text-[#959595] mb-1">ip address</p>
+                            <p className="text-xl lg:text-2xl font-medium ">192.212.174.101</p>
                         </div>
-                        <div className="text-center">
-                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">Location</p>
-                            <p className="text-xl font-medium ">Brooklyn, NY 10001</p>
+                        <div className="lg:min-h-[6rem] lg:pl-8 lg:border-l-2 border-[#d9d9d9] text-center">
+                            <p className="lg:text-start uppercase font-semibold text-xs text-[#959595] mb-1">Location</p>
+                            <p className="lg:text-start text-xl lg:text-2xl font-medium lg:max-w-[14ch] lg:break-words">Brooklyn, NY 10001</p>
                         </div>
-                        <div className="text-center">
-                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">Timezone</p>
-                            <p className="text-xl font-medium ">UTC -05:00</p>
+                        <div className="lg:min-h-[6rem] lg:pl-8 lg:border-l-2 border-[#d9d9d9] text-center">
+                            <p className="lg:text-start uppercase font-semibold text-xs text-[#959595] mb-1">Timezone</p>
+                            <p className="text-xl font-medium lg:text-2xl">UTC -05:00</p>
                         </div>
-                        <div className="text-center">
-                            <p className="uppercase font-semibold text-xs text-[#959595] mb-1">ISP</p>
-                            <p className="text-xl font-medium ">SpaceX Starlink</p>
+                        <div className="lg:min-h-[6rem] text-center lg:pl-8 lg:border-l-2 border-[#d9d9d9]">
+                            <p className="lg:text-start uppercase font-semibold text-xs text-[#959595] mb-1">ISP</p>
+                            <p className="text-xl font-medium lg:text-2xl">SpaceX Starlink</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="map" className={`w-full h-[calc(100vh-250px)] bg-red-700`}></div>
         </>
     );
 }
