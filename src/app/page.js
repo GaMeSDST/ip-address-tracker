@@ -1,6 +1,20 @@
+"use client";
 import Image from "next/image";
-
+import { useEffect } from "react";
 export default function Home() {
+    useEffect(() => {
+        let map = L.map("map", { zoomControl: false }).setView([51.505, -0.09], 13);
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }).addTo(map);
+        let icon = L.icon({
+            iconUrl: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+            iconSize: [46, 56],
+            className: "bg-[url(../../public/icon-location.svg)]",
+        });
+        let marker = L.marker([51.5, -0.09], { icon: icon }).addTo(map);
+    });
     return (
         <>
             <div className="relative h-[15.625rem]">
@@ -27,7 +41,7 @@ export default function Home() {
                             <div className="bg-center bg-[url(../../public/icon-arrow.svg)] w-[0.6875rem] h-[0875rem] bg-no-repeat"></div>
                         </button>
                     </div>
-                    <div className="flex flex-col gap-5 lg:w-[63rem] lg:h-[10rem] lg:flex-row lg:gap-[2rem] lg:items-start lg:pt-[2rem] lg:justify-start lg:pl-[3rem] justify-center w-[20rem] h-[19rem] rounded-lg relative top-[1.5rem] bg-white text-[#2e2e2e]">
+                    <div className="z-[2] flex flex-col gap-5 lg:w-[63rem] lg:h-[10rem] lg:flex-row lg:gap-[2rem] lg:items-start lg:pt-[2rem] lg:justify-start lg:pl-[3rem] justify-center w-[20rem] h-[18rem] rounded-lg relative top-[1.5rem] bg-white text-[#2e2e2e]">
                         <div className="lg:min-h-[6rem] text-center">
                             <p className="lg:text-start uppercase font-semibold text-xs text-[#959595] mb-1">ip address</p>
                             <p className="text-xl lg:text-2xl font-medium ">192.212.174.101</p>
@@ -47,7 +61,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div id="map" className={`w-full h-[calc(100vh-250px)] bg-red-700`}></div>
+            <div id="map" className={`z-[1] w-full h-[calc(100vh-250px)]`}></div>
         </>
     );
 }
