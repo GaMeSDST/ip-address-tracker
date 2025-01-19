@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
--   [Solution URL]()
+-   [Solution URL](https://www.frontendmentor.io/solutions/ip-address-tracker-using-react-nextjs-tailwindcss-leafletjs-ipify-X4U2z_E_6S)
 -   [Live Site URL](https://ip-address-tracker-rosy-alpha.vercel.app/)
 
 ### Built with
