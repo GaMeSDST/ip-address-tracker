@@ -37,4 +37,4 @@ Users should be able to:
 ## Author
 
 -   Frontend Mentor - [@GaMeSDST](https://www.frontendmentor.io/profile/GaMeSDST)
--   Twitter - [@GaMeSDST](https://twitter.com/GaMeSDST
+-   Twitter - [@GaMeSDST](https://twitter.com/GaMeSDST)
